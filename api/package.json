@@ -1,0 +1,24 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "watch": "node --watch .",
+    "inspect": "node --inspect-brk .",
+    "test": "jest test/*.spec.js",
+    "test-inspect": "jest --inspect-brk test/*.spec.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "com": "file:../com",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.2",
+    "multer": "^1.4.5-lts.1",
+    "validator": "^13.12.0"
+  },
+  "type": "module"
+}
