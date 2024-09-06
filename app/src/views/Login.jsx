@@ -52,7 +52,6 @@ export default function Login() {
 
                 <div className="campo acciones">
                     <a href="/register">Registrarse en devJobs</a>
-                    <a href="/restrablecer-contraseña">Olvidé mi contraseña</a>
                 </div>
 
                 <div className="campo centrar-horizontal">

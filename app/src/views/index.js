@@ -8,7 +8,6 @@ import Administrator from './Administrator.jsx'
 import Profile from './Profile.jsx'
 import Candidates from './Candidates.jsx'
 import Error from './Error.jsx'
-import ForgetPassword from './ForgetPassword.jsx'
 
 export {
     Home,
@@ -20,6 +19,5 @@ export {
     Administrator,
     Profile,
     Candidates,
-    Error,
-    ForgetPassword
+    Error
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Header } from '../components/index.js'
 
 export default function Error() {
     const [search, setSearch] = useState(true)
