@@ -8,6 +8,7 @@ import Administrator from './Administrator.jsx'
 import Profile from './Profile.jsx'
 import Candidates from './Candidates.jsx'
 import Error from './Error.jsx'
+import SearchResults from './SearchResults.jsx'
 
 export {
     Home,
@@ -19,5 +20,6 @@ export {
     Administrator,
     Profile,
     Candidates,
-    Error
+    Error,
+    SearchResults
 }

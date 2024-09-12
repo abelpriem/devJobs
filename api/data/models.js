@@ -72,6 +72,8 @@ const vacante = new Schema({
     }
 })
 
+vacante.index({ title: 'text' })
+
 // MODELS
 const Vacante = new model('Vacante', vacante)
 

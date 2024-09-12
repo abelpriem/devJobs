@@ -17,7 +17,8 @@ import { createNewOfferHandler,
     changeUserDataHandler,
     changeUserPasswordHandler,
     deleteOfferHandler,
-    uploadCvHandler } from './handlers/index.js'
+    uploadCvHandler,
+    searchOfferHandler } from './handlers/index.js'
 
 dotenv.config()
 
@@ -71,6 +72,9 @@ mongoose.connect(process.env.URL_MONGODB_API)
 
         // ROUTE - UPLOAD CV-CANDIDATE
         server.post('/upload/cv/:offerUrl', upload.single('cv'), uploadCvHandler)
+
+        // ROUTE - SEARCH OFFER
+        server.get('/search-offer/:offerSearched', searchOfferHandler)
 
         // LISTENING
         server.listen(process.env.PORT, () => console.log(`Server online! Listening on: ${process.env.PORT}`))

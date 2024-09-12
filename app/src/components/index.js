@@ -5,6 +5,8 @@ import Header from './Header.jsx'
 import SkillsSelector from './SkillsSelector.jsx'
 import PrivateRoute from './PrivateRoute.jsx'
 import ListOffersCandidate from './ListOffersCandidate.jsx'
+import Handlebar from './Handlebar.jsx'
+import HandlebarList from './HandlebarList.jsx'
 
 export {
     Header,
@@ -13,5 +15,7 @@ export {
     ListOffersCandidate,
     Vacancy,
     SkillsSelector,
-    PrivateRoute
+    PrivateRoute,
+    Handlebar,
+    HandlebarList
 }

@@ -10,6 +10,7 @@ import changeUserData from './changeUserData.js'
 import changeUserPassword from './changeUserPassword.js'
 import deleteOffer from './deleteOffer.js'
 import uploadCv from './uploadCv.js'
+import searchOffer from './searchOffer.js'
 
 export {
     createOffer,
@@ -23,5 +24,6 @@ export {
     changeUserData,
     changeUserPassword,
     deleteOffer,
-    uploadCv
+    uploadCv,
+    searchOffer
 }

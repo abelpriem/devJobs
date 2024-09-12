@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import session from '../helpers/session.js'
+import { Handlebar } from './index.js'
+import { searchOffer } from '../logic/index.js'
 
 export default function Header({search}) {
     const navigate = useNavigate()
@@ -12,6 +14,19 @@ export default function Header({search}) {
         navigate('/')
     }
 
+    // SUBMIT HANDLEBAR
+    function handleSubmitHandlebar(event) {
+        event.preventDefault()
+        
+        const offerToSearch = event.target.q.value
+
+        try {
+            searchOffer(offerToSearch)
+        } catch(error) {
+            navigate('/404')
+        }
+    }
+
     return <>
         <div className="nombre-sitio contenedor">
             <h1>
@@ -19,12 +34,7 @@ export default function Header({search}) {
             </h1>
 
             {search === true && 
-                <div className="buscador px-10">
-                    <form action="#">
-                        <input type="text" className="buscar"></input>
-                        <input type="submit" value="Buscar"></input>
-                    </form>
-                </div>
+               <Handlebar />
             }
 
             {session.token && 

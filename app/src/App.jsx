@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { Home, NewOffer, Offer, Edit, Register, Login, Administrator, Profile, Candidates, Error } from './views/index.js'
+import { Home, NewOffer, Offer, Edit, Register, Login, Administrator, Profile, Candidates, Error, SearchResults } from './views/index.js'
 import { PrivateRoute } from './components/index.js'
 
 export default function App() {
@@ -32,9 +32,8 @@ export default function App() {
               <Candidates />
             </PrivateRoute>} />
           <Route path="/404" element={<Error />} />
-
-          {/* Ruta para capturar cualquier URL no existente */}
           <Route path="*" element={<Navigate to="/404" replace />} />
+          <Route path="/search-offer/:offerSearched" element={<SearchResults />} />
         </Routes>
       </Router>
     </>

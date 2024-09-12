@@ -9,6 +9,8 @@ export default function Edit() {
     const [offer, setOffer] = useState([])
     const { offerUrl } = useParams()
 
+    console.log(offer)
+
     const navigate = useNavigate()
 
     const [title, setTitle] = useState('')
@@ -23,7 +25,7 @@ export default function Edit() {
         async function fetchOffer() {            
             try {
                 const selectedOffer = await retrieveOneOffer(offerUrl)
-                setOffer(selectedOffer)
+                setOffer(selectedOffer.offer)
                 setTitle(selectedOffer.title)
                 setCompany(selectedOffer.company)
                 setLocation(selectedOffer.location)

@@ -10,6 +10,7 @@ import changeUserDataHandler from './changeUserDataHandler.js'
 import changeUserPasswordHandler from './changeUserPasswordHandler.js'
 import deleteOfferHandler from './deleteOfferHandler.js'
 import uploadCvHandler from './uploadCvHandler.js'
+import searchOfferHandler from './searchOfferHandler.js'
 
 export {
     createNewOfferHandler,
@@ -23,5 +24,6 @@ export {
     changeUserDataHandler,
     changeUserPasswordHandler,
     deleteOfferHandler,
-    uploadCvHandler
+    uploadCvHandler,
+    searchOfferHandler
 }
