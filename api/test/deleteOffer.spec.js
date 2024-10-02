@@ -14,6 +14,7 @@ describe("deleteOffer", () => {
     before(() => mongoose.connect(process.env.URL_MONGODB_TEST))
 
     beforeEach(() => Usuario.deleteMany())
+    beforeEach(() => Vacante.deleteMany())
 
     // POSSITIVE CASE
     it("success on delete one offer selected", async () => {
@@ -76,6 +77,7 @@ describe("deleteOffer", () => {
     it("fails on delete an offer with no authorization", async () => {
         const user = await Usuario.create({ name: random.name(), email: random.email(), password: random.password() })
         const otherUser = await Usuario.create({ name: random.name(), email: random.email(), password: random.password() })
+        
         const offer = await Vacante.create({title: random.text(), location: random.text(), candidates: [], url: random.text(), author: user._id.toString(), company: random.text(), contract: random.text(), description: random.text(), salary: random.text(), skills: [random.text()] })
 
         try {
