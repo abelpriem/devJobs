@@ -2,137 +2,137 @@
 
 ![B0DEAD90-0842-47F4-BBFB-6024B7AD066A_4_5005_c](https://github.com/user-attachments/assets/d586c007-2dd7-42cf-bb45-7c1f387b8d14)
 
-devJobs es una aplicación web creada para conectar desarrolladores y reclutadores a través de un portal de trabajo especializado en vacantes tecnológicas.
+devJobs is a web application designed to connect developers and recruiters through a specialized job portal for tech vacancies.
 
-- Producción: **PENDIENTE**
+**Production**: PENDING
 
-## Tabla de Contenidos
+## Table of Contents
 
-- [Descripción](#descripción)
-- [Características](#características)
-- [Tecnologías](#tecnologías)
-- [Instalación](#instalación)
-- [Uso](#uso)
+- [Description](#description)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
 - [API](#api)
 - [Testing](#testing)
-- [Licencia](#licencia)
+- [License](#license)
 
-## Descripción
+## Description
 
-devJobs es un portal de trabajo enfocado en desarrolladores y reclutadores. Los reclutadores pueden publicar, editar y eliminar ofertas de trabajo, así como gestionar candidatos y revisar sus currículums. Los candidatos pueden buscar ofertas de empleo, aplicar a ellas y enviar su información directamente a los reclutadores.
+devJobs is a job portal focused on developers and recruiters. Recruiters can post, edit, and delete job offers, as well as manage candidates and review their resumes. Candidates can search for job offers, apply, and send their information directly to recruiters.
 
-El sistema también cuenta con funcionalidades de autenticación para asegurar que solo los usuarios autorizados puedan acceder a ciertos paneles de administración.
+The system also features authentication functionalities to ensure that only authorized users can access certain admin panels.
 
-## Características
+## Features
 
-- **Publicación de ofertas de empleo**: Los reclutadores pueden listar vacantes con detalles como tecnología (React, Angular, etc.), ubicación, salario y descripción.
-- **Aplicación a vacantes**: Los candidatos pueden aplicar a las vacantes enviando sus datos y currículum.
-- **Panel de administración para reclutadores**: Permite a los reclutadores gestionar sus vacantes, editar sus datos, y revisar los currículums de los candidatos.
-- **Buscador de ofertas**: En la página principal, los candidatos pueden filtrar ofertas por palabras clave.
-- **Autenticación y autorización**: Los usuarios pueden registrarse, iniciar sesión, y acceder a funcionalidades según su rol.
-- **Gestión de contraseñas**: Implementada con bcrypt para encriptación segura.
-- **Subida de archivos**: Los candidatos pueden subir su currículum a través de multer.
-- **Validación de datos**: Validación de campos de entrada con validator.
+- **Job posting**: Recruiters can list job openings with details such as technology (React, Angular, etc.), location, salary, and description.
+- **Job application**: Candidates can apply to job postings by submitting their data and resume.
+- **Admin panel for recruiters**: Allows recruiters to manage their job postings, edit their personal data, and review candidate resumes.
+- **Job search**: On the main page, candidates can filter job offers by keywords.
+- **Authentication and authorization**: Users can register, log in, and access features according to their role.
+- **Password management**: Implemented with bcrypt for secure encryption.
+- **File upload**: Candidates can upload their resumes using multer.
+- **Data validation**: Input field validation with validator.
 
-## Tecnologías
+## Technologies
 
 ### Frontend
 
-- **Vite**: Entorno de desarrollo rápido.
-- **React**: Framework de JavaScript para la creación de interfaces de usuario.
-- **react-router-dom**: Navegación entre rutas seguras y coherentes.
-- **sweetalert2**: Alertas y notificaciones interactivas.
+- **Vite**: Fast development environment.
+- **React**: JavaScript framework for building user interfaces.
+- **react-router-dom**: Navigation between secure and consistent routes.
+- **sweetalert2**: Interactive alerts and notifications.
 
 ### Backend
 
-- **NodeJS**: Entorno de ejecución para JavaScript del lado del servidor.
-- **Express**: Framework minimalista para la creación de APIs.
-- **JWT**: Autenticación mediante JSON Web Tokens.
-- **bcrypt**: Encriptación de contraseñas.
-- **multer**: Subida de archivos en local.
-- **validator**: Validación de entradas de usuario.
-- **mocha/chai**: Librerías para testing y pruebas unitarias.
+- **NodeJS**: Server-side JavaScript runtime environment.
+- **Express**: Minimalist framework for building APIs.
+- **JWT**: Authentication via JSON Web Tokens.
+- **bcrypt**: Password encryption.
+- **multer**: File uploads on the local server.
+- **validator**: User input validation.
+- **mocha/chai**: Libraries for testing and unit tests.
 
-### Base de Datos
+### Database
 
-- **MongoDB**: Base de datos no relacional para almacenar información de usuarios, vacantes y aplicaciones.
+- **MongoDB**: Non-relational database to store user information, job vacancies, and applications.
 
-## Instalación
+## Installation
 
-### Requisitos
+### Requirements
 
-- **Node.js** >= 14.x
-- **MongoDB** instalado localmente o acceso a una instancia en la nube.
+- Node.js >= 14.x
+- MongoDB installed locally or access to a cloud instance.
 
-### Pasos
+### Steps
 
-1. Clona el repositorio:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/tuusuario/devJobs.git
 
 ```
 
-2. Instala las dependencias del backend:
+2. Install backend dependencies:
 
 ```bash
 cd api
 npm install
 ```
 
-3. Instala las dependencias del frontend:
+3. Install frontend dependencies:
 
 ```bash
 cd ../app
 npm install
 ```
 
-4. Crea un archivo .env en el directorio backend con las siguientes variables de entorno:
+4. Create a .env file in the backend directory with the following environment variables:
 
 ```bash
 MONGO_URI=tu_mongo_uri
 JWT_SECRET=tu_jwt_secret
 ```
 
-5. Ejecuta la aplicación en modo desarrollo:
+5. Run the application in development mode:
 
 ```bash
 cd api
 node .
 ```
 
-6. En otra terminal, ejecuta el frontend:
+6. Run frontend in a separate terminal:
 
 ```bash
 cd ../app
 npm run dev
 ```
 
-### Uso
+### Usage
 
-1. Los reclutadores pueden registrarse y crear vacantes desde el panel de administración.
-2. Los candidatos pueden buscar y filtrar vacantes en la página principal, además de aplicar a ellas enviando sus datos y currículum.
-3. Los reclutadores pueden gestionar sus vacantes y ver la lista de candidatos desde su panel.
+1. Recruiters can register and create job postings from the admin panel.
+2. Candidates can search and filter job offers on the main page, as well as apply by submitting their data and resume.
+3. Recruiters can manage their job postings and view the list of candidates from their admin panel.
 
 ### API
 
-La API provee varios endpoints para manejar la autenticación, las vacantes y los usuarios. Algunos ejemplos de endpoints son:
+The API provides several endpoints for managing authentication, job postings, and users. Some example endpoints are:
 
-- `POST /users/auth`: Iniciar sesión.
-- `POST /users/create`: Registrar un nuevo usuario.
-- `GET /offers`: Obtener la lista de vacantes.
-- `POST /offers/create`: Crear una nueva vacante (solo reclutadores).
-- `PUT /offers/edit/:offerUrl`: Editar una vacante (solo reclutadores).
-- `DELETE /offer/:offerUrl`: Eliminar una vacante (solo reclutadores).
+- `POST /users/auth`: Log in.
+- `POST /users/create`: Register a new user.
+- `GET /offers`: Get the list of job postings.
+- `POST /offers/create`: Create a new job posting (recruiters only).
+- `PUT /offers/edit/:offerUrl`: Edit a job posting (recruiters only).
+- `DELETE /offer/:offerUrl`: Delete a job posting (recruiters only).
 
 ### Testing
 
-Se han implementado pruebas unitarias para garantizar la fiabilidad del sistema. Utilizamos las siguientes librerías para testing:
+Unit tests have been implemented to ensure system reliability. We use the following libraries for testing:
 
-- **Mocha**: Framework para la ejecución de pruebas.
-- **Chai**: Librería para realizar aserciones.
+- **Mocha**: Framework for running tests.
+- **Chai**: Library for assertions.
 
-Para ejecutar las pruebas:
+To run the tests:
 
 ```bash
 cd api
