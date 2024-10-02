@@ -135,7 +135,7 @@ Se han implementado pruebas unitarias para garantizar la fiabilidad del sistema.
 Para ejecutar las pruebas:
 
 ```bash
-cd backend
+cd api
 npm run test
 
 ```
