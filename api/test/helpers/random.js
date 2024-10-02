@@ -13,6 +13,10 @@ function password() {
     return `password-${Math.random()}`
 }
 
+function text() {
+    return `text-${Math.random()}`
+}
+
 function id() {
     return `ID-${Math.random()}`
 }
@@ -25,6 +29,7 @@ const random = {
     name,
     email,
     password,
+    text,
     id,
     mongoId
 }
