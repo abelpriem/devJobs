@@ -4,8 +4,8 @@
     "start": "node .",
     "watch": "node --watch .",
     "inspect": "node --inspect-brk .",
-    "test": "jest test/*.spec.js",
-    "test-inspect": "jest --inspect-brk test/*.spec.js"
+    "test": "mocha test/*.spec.js",
+    "test-inspect": "mocha --inspect-brk test/*.spec.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -20,5 +20,9 @@
     "multer": "^1.4.5-lts.1",
     "validator": "^13.12.0"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3"
+  }
 }

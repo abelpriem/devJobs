@@ -1,7 +1,7 @@
-import validator from 'validator'
 import bcrypt from 'bcrypt'
-import { Usuario } from '../data/models.js'
 import { errors } from 'com'
+import validator from 'validator'
+import { Usuario } from '../data/models.js'
 const { SystemError, ContentError, CredentialsError, NotFoundError } = errors
 
 export default async function authenticateUser(email, password) {
@@ -25,7 +25,6 @@ export default async function authenticateUser(email, password) {
         const match = await bcrypt.compare(password, user.password)
 
         if (match) {
-            // const userId = user._id
             return { id: user._id, username: user.name }
         } else {
             throw new CredentialsError('Error de credenciales. Inténtelo de nuevo')
