@@ -1,9 +1,16 @@
-import { Vacante, Usuario } from '../data/models.js'
 import { errors } from 'com'
-const { SystemError, NotFoundError } = errors
+import validator from 'validator'
+import { Usuario, Vacante } from '../data/models.js'
+const { SystemError, NotFoundError, ContentError } = errors
 
 export default async function retrieveOneOffer(offerUrl) {
+    const validateUrl = !validator.isEmpty(offerUrl)
+    
     try {
+        if(!validateUrl) {
+            throw new ContentError('Formato URL vacío o inválido... Inténtelo de nuevo')
+        }
+
         const offer = await Vacante.findOne({ url: { $in: offerUrl }}).lean()
 
         if (!offer) {
