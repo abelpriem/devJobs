@@ -1,7 +1,7 @@
-import validator from 'validator'
-import fs from 'fs/promises'
-import { Vacante } from '../data/models.js'
 import { errors } from 'com'
+import fs from 'fs/promises'
+import validator from 'validator'
+import { Vacante } from '../data/models.js'
 const { NotFoundError, ContentError, SystemError, DuplicityError } = errors
 
 export default async function uploadCv(offerUrl, name, email, originalname, oldPath) {
