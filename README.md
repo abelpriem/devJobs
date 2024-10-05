@@ -1,6 +1,6 @@
 # devJobs [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)[![Netlify Status](https://api.netlify.com/api/v1/badges/b6605ef0-438b-4f66-825d-6f6a000e696f/deploy-status)](https://app.netlify.com/sites/hiinit-web-terminal/deploys)
 
-![B0DEAD90-0842-47F4-BBFB-6024B7AD066A_4_5005_c](https://github.com/user-attachments/assets/d586c007-2dd7-42cf-bb45-7c1f387b8d14)
+![B0DEAD90-0842-47F4-BBFB-6024B7AD066A_4_5005_c](https://github.com/user-attachments/assets/03170216-e828-4fec-96dc-022ace111990)
 
 devJobs is a web application designed to connect developers and recruiters through a specialized job portal for tech vacancies.
 
