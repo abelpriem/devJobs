@@ -1,24 +1,26 @@
+import cookieParser from 'cookie-parser'
+import cors from 'cors'
+import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
-import dotenv from 'dotenv'
-import cors from 'cors'
 import multer from 'multer'
 import path from 'path'
-import cookieParser from 'cookie-parser'
-import { fileURLToPath } from 'url' 
-import { createNewOfferHandler, 
-    retrieveOffersHandler, 
-    retrieveOneOfferHandler, 
-    editOfferHandler, 
-    registerUserHandler, 
-    authenticateUserHandler, 
-    retrieveUserHandler,
-    retrieveOffersAuthorHandler,
+import { fileURLToPath } from 'url'
+import {
+    authenticateUserHandler,
     changeUserDataHandler,
     changeUserPasswordHandler,
+    createNewOfferHandler,
     deleteOfferHandler,
-    uploadCvHandler,
-    searchOfferHandler } from './handlers/index.js'
+    editOfferHandler,
+    registerUserHandler,
+    retrieveOffersAuthorHandler,
+    retrieveOffersHandler,
+    retrieveOneOfferHandler,
+    retrieveUserHandler,
+    searchOfferHandler,
+    uploadCvHandler
+} from './handlers/index.js'
 
 dotenv.config()
 
@@ -31,7 +33,9 @@ mongoose.connect(process.env.URL_MONGODB_API)
         const jsonBodyParser = express.json()
         const __filename = fileURLToPath(import.meta.url)
         const __dirname = path.dirname(__filename)
-        server.use(cors())
+        server.use(cors({
+            origin: 'https://devjobsweb.netlify.app'
+        }))
         server.use(cookieParser())
         
         const upload = multer({ dest: 'uploads/curriculums'})
