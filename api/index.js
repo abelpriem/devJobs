@@ -33,9 +33,7 @@ mongoose.connect(process.env.URL_MONGODB_API)
         const jsonBodyParser = express.json()
         const __filename = fileURLToPath(import.meta.url)
         const __dirname = path.dirname(__filename)
-        server.use(cors({
-            origin: 'https://devjobsweb.netlify.app'
-        }))
+        server.use(cors())
         server.use(cookieParser())
         
         const upload = multer({ dest: 'uploads/curriculums'})
