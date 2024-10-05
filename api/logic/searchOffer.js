@@ -1,6 +1,6 @@
+import { errors } from 'com'
 import validator from 'validator'
 import { Vacante } from '../data/models.js'
-import { errors } from 'com'
 const { SystemError, NotFoundError, ContentError } = errors
 
 export default async function searchOffer(offerSearched) {
@@ -13,7 +13,7 @@ export default async function searchOffer(offerSearched) {
 
         const offers = await Vacante.find({ $text: { $search : offerSearched}}).lean()
 
-        if (offers.lenght === 0) {
+        if (offers.length === 0) {
             throw new NotFoundError('Oferta no encontrada. Inténtelo de nuevo')
         }
 
