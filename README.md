@@ -4,7 +4,7 @@
 
 devJobs is a web application designed to connect developers and recruiters through a specialized job portal for tech vacancies.
 
-**Production**: PENDING
+**Production**: https://devjobsweb.netlify.app/
 
 ## Table of Contents
 
